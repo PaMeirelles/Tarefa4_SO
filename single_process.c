@@ -6,8 +6,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
- #include <sys/ipc.h>
- #include <sys/shm.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
 
 #define SEM_PERMS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP)
 
@@ -55,7 +55,7 @@ void consume(char *  p){
     sem_post(mutex);
     sem_post(empty);
     }
-  }
+}
 int main(void) {
   int segmento, id, pid, status;
   char * p;
